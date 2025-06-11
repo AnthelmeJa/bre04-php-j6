@@ -1,5 +1,6 @@
 <?php
     require "connexion.php";
+    
     $query = $db->prepare("INSERT INTO address (street, city, zipcode) VALUES ( :street, :city, :zipcode)");
 
     $parameters = [
@@ -9,9 +10,5 @@
     ];
 
     $query->execute($parameters);
-    
-    $id = $db->lastInsertId();
-
-
 
 ?>
