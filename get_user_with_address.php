@@ -9,7 +9,7 @@
 
     $query->execute($parameters);
     
-    $user = $query->fetchAll(PDO::FETCH_ASSOC);
+    $user = $query->fetch(PDO::FETCH_ASSOC);
     
     var_dump($user);
 
